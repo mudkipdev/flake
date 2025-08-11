@@ -10,6 +10,7 @@
       push.autoSetupRemote = true;
       rebase.autoStash = true;
       pull.rebase = true;
+      core.editor = "micro";
     };
   };
 
