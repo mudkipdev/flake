@@ -3,10 +3,12 @@
 {
   home.packages = with pkgs; [
     (prismlauncher.override {
-      jdks = [ jdk21 ];
+      jdks = [
+        jdk21
+        jdk8
+      ];
     })
 
     lunar-client
-    jdk21
   ];
 }
