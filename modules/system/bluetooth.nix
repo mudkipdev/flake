@@ -1,8 +1,9 @@
 { config, pkgs, lib, ... }:
 
 {
+  services.openssh.enable = true;
+
   # one of these lines fixes bluetooth on intel AX200 and idgaf to binary search BECAUSE IT WORKS!
-  services.blueman.enable = true;
   hardware.enableAllFirmware = true;
   hardware.enableRedistributableFirmware = true;
   boot.kernelModules = [ "btusb" "bluetooth" "btintel" ];

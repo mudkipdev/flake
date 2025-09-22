@@ -6,6 +6,7 @@
     ./development.nix
     ./gaming.nix
     ./git.nix
+    ./fastfetch.nix
   ];
 
   programs.home-manager.enable = true;
@@ -25,7 +26,6 @@
     };
 
     packages = with pkgs; [
-      fastfetch
       vesktop
       spotify
       bitwarden
@@ -47,5 +47,17 @@
     sessionVariables = {
       EDITOR = "micro";
     };
+  };
+
+  programs.bash = {
+    enable = true;
+    bashrcExtra = ''
+      PS1='\[\033[01;32m\]\w\[\033[00m\] $ '
+
+      function qwen () {
+        MODEL="beast:latest"
+        ANTHROPIC_BASE_URL=http://localhost:8080/anthropic ANTHROPIC_AUTH_TOKEN="dummy-key" API_TIMEOUT_MS=600000 ANTHROPIC_MODEL=ollama/$MODEL ANTHROPIC_SMALL_FAST_MODEL=ollama/$MODEL claude
+      }
+    '';
   };
 }

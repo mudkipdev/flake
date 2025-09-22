@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ./../../modules/gaming.nix
+    ./../../modules/ollama.nix
     ./../../modules/system/audio.nix
     ./../../modules/system/bluetooth.nix
     ./../../modules/system/boot.nix
@@ -12,6 +13,7 @@
     ./../../modules/system/locale.nix
     ./../../modules/system/networking.nix
     ./../../modules/system/system.nix
+    ./../../modules/system/virtualization.nix
     ./../../modules/vpn.nix
   ];
 

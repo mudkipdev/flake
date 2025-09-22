@@ -24,9 +24,14 @@
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    voxel-thing = {
+      url = "path:/home/mudkip/voxel-thing";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs @ { nixpkgs, home-manager, plasma-manager, firefox-addons, rust-overlay, ... }:
+  outputs = inputs @ { nixpkgs, home-manager, plasma-manager, firefox-addons, rust-overlay, voxel-thing, ... }:
   let
     constants = import ./constants.nix { inherit (nixpkgs) lib; };
   in

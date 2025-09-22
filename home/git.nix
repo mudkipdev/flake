@@ -7,6 +7,7 @@
     userEmail = constants.user.email;
 
     extraConfig = {
+      init.defaultBranch = "main";
       push.autoSetupRemote = true;
       rebase.autoStash = true;
       pull.rebase = true;

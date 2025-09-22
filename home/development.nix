@@ -10,6 +10,7 @@
     jdk21
     pnpm
     uv
+    python3
     go
 
     (rust-bin.nightly.latest.default.override {
@@ -32,6 +33,7 @@
         svelte.svelte-vscode
         jnoortheen.nix-ide
         ms-python.python
+        ms-python.vscode-pylance
         golang.go
 
         # Miscellaneous
@@ -40,7 +42,10 @@
       ];
 
       userSettings = {
+        "workbench.startupEditor" = "none";
+        "chat.disableAIFeatures" = "true";
         "workbench.colorTheme" = "GitHub Dark Default";
+        "python.analysis.typeCheckingMode" = "strict";
       };
     };
   };
