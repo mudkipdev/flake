@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ./../../modules/gaming.nix
     ./../../modules/ollama.nix
+    ./../../modules/open-webui.nix
     ./../../modules/system/audio.nix
     ./../../modules/system/bluetooth.nix
     ./../../modules/system/boot.nix

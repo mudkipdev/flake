@@ -11,9 +11,21 @@
 
   programs.home-manager.enable = true;
 
+  # Fix fcitx5 package path issue
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+    fcitx5.addons = with pkgs.kdePackages; [ fcitx5-with-addons ];
+  };
+
   programs.plasma = {
     enable = true;
     workspace.wallpaper = "${config.home.homeDirectory}/wallpaper.png";
+  };
+
+  programs.micro = {
+    enable = true;
+    settings.eofnewline = false;
   };
 
   home = {
@@ -28,9 +40,9 @@
     packages = with pkgs; [
       vesktop
       spotify
-      bitwarden
+      bitwarden-desktop
       qbittorrent
-      micro
+      deskflow
 
       (anki.withAddons [
         ankiAddons.passfail2
@@ -42,6 +54,9 @@
       davinci-resolve
       aseprite
       blender
+
+      # Gaming
+      # ninecraft
     ];
 
     sessionVariables = {

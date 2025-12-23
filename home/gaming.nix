@@ -11,6 +11,5 @@
 
     lunar-client
     classicube
-    inputs.voxel-thing.packages.${pkgs.system}.default
   ];
 }

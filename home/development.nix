@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     claude-code
+    codex
     jetbrains.idea-community
     godot_4
     docker
@@ -13,7 +14,7 @@
     python3
     go
 
-    (rust-bin.nightly.latest.default.override {
+    (rust-bin.stable."1.91.1".default.override {
       extensions = [ "rust-src" "rust-analyzer" "clippy" "rustfmt" ];
     })
 
