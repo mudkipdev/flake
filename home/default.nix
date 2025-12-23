@@ -3,6 +3,7 @@
 {
   imports = [
     ./browser.nix
+    ./btop.nix
     ./development.nix
     ./gaming.nix
     ./git.nix

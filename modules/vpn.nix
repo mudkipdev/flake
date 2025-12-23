@@ -2,7 +2,7 @@
 
 {
   services.mullvad-vpn.enable = true;
-  services.tailscale.enable = true;
+  # services.tailscale.enable = true;
 
   networking.firewall = {
     checkReversePath = "loose";

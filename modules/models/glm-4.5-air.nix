@@ -1,7 +1,7 @@
-{ modelsDir }:
+{ modelsDirectory }:
 
 {
-  model = "${modelsDir}/GLM-4.5-Air-Q3_K_M-00001-of-00002.gguf";
+  model = "${modelsDirectory}/GLM-4.5-Air-Q3_K_M-00001-of-00002.gguf";
   settings = {
     "ctx-size" = 2048;
     "parallel" = 1;

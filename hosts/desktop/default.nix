@@ -9,10 +9,12 @@
     ./../../modules/system/audio.nix
     ./../../modules/system/bluetooth.nix
     ./../../modules/system/boot.nix
+    ./../../modules/system/cloudflared.nix
     ./../../modules/system/desktop.nix
     ./../../modules/system/fonts.nix
     ./../../modules/system/locale.nix
     ./../../modules/system/networking.nix
+    ./../../modules/system/ssh.nix
     ./../../modules/system/system.nix
     ./../../modules/system/virtualization.nix
     ./../../modules/vpn.nix

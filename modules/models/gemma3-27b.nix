@@ -1,14 +1,13 @@
 { modelsDirectory, cacheDirectory }:
 
 {
-  model = "${cacheDirectory}/Qwen3-VL-30B-A3B-Instruct-Q4_K_M.gguf";
+  model = "${cacheDirectory}/gemma-3-27b-it-Q4_K_M.gguf";
   settings = {
-    "ctx-size" = 8192;
+    "ctx-size" = 2048;
     "parallel" = 1;
-    "n-gpu-layers" = 28;
-    "n-cpu-moe" = 8;
-    "cache-type-k" = "q8_0";
-    "cache-type-v" = "q8_0";
+    "n-gpu-layers" = 60;
+    "cache-type-k" = "q4_0";
+    "cache-type-v" = "q4_0";
     "threads" = 12;
     "threads-batch" = 12;
     "batch-size" = 512;
