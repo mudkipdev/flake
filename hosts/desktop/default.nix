@@ -4,7 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ./../../modules/gaming.nix
-    ./../../modules/ollama.nix
+    ./../../modules/llama-cpp.nix
     ./../../modules/open-webui.nix
     ./../../modules/system/audio.nix
     ./../../modules/system/bluetooth.nix
