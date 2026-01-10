@@ -7,5 +7,6 @@
   services.xserver.xkb = {
     layout = constants.keyboard.layout;
     variant = constants.keyboard.variant;
+    options = "grp:win_space_toggle";
   };
 }

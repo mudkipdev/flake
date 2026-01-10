@@ -202,7 +202,7 @@ in {
         Group = "llama-cpp";
         WorkingDirectory = "/var/lib/llama-cpp";
         ExecStart = downloadModelsScript;
-        Restart = "on-failure";
+        Restart = "always";
         RestartSec = 30;
         StartLimitIntervalSec = 0;
       };

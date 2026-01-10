@@ -15,7 +15,7 @@ rec {
   };
 
   keyboard = {
-    layout = "us";
+    layout = "us,ru,jp,ua";
     variant = "";
   };
 }
