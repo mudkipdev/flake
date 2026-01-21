@@ -8,6 +8,7 @@
     godot_4
     docker
     docker-compose
+    bore-cli
     jdk21
     pnpm
     uv

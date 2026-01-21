@@ -16,15 +16,8 @@ let
 
   presetModels = lib.mapAttrs
     (name: model:
-      let
-        baseSettings =
-          model.settings
-          // (if model ? model then { model = model.model; } else { "hf-repo" = model."hf-repo"; });
-      in
-        if name == config.services.llama-cpp-router.defaultModel then
-          baseSettings // { "load-on-startup" = true; }
-        else
-          baseSettings
+      model.settings
+      // (if model ? model then { model = model.model; } else { "hf-repo" = model."hf-repo"; })
     )
     models;
 

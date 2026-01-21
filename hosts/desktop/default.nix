@@ -9,7 +9,6 @@
     ./../../modules/system/audio.nix
     ./../../modules/system/bluetooth.nix
     ./../../modules/system/boot.nix
-    # ./../../modules/system/cloudflared.nix
     ./../../modules/system/desktop.nix
     ./../../modules/system/fonts.nix
     ./../../modules/system/locale.nix

@@ -19,7 +19,6 @@
 
         extraOptions = [
           "--network=host"
-          "--restart=always"
         ];
       };
     };
