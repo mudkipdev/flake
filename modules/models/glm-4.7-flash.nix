@@ -13,7 +13,7 @@
     "threads-batch" = 12;
     "batch-size" = 512;
     "ubatch-size" = 128;
-    "flash-attn" = true;
+    "flash-attn" = false;
     "cont-batching" = true;
   };
 }
