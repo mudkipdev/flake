@@ -8,6 +8,7 @@
     "n-gpu-layers" = 28;
     "n-cpu-moe" = 8;
     "cache-type-k" = "q8_0";
+    "cache-type-v" = "q8_0";
     "threads" = 12;
     "threads-batch" = 12;
     "batch-size" = 512;
