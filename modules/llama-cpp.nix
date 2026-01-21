@@ -12,6 +12,7 @@ let
     "glm-4.5-air:106b" = import ./models/glm-4.5-air.nix { inherit modelsDirectory; };
     "qwen3-vl:30b" = import ./models/qwen3-vl.nix { inherit modelsDirectory cacheDirectory; };
     "gemma3:27b" = import ./models/gemma3-27b.nix { inherit modelsDirectory cacheDirectory; };
+    "glm-4.7-flash:30b" = import ./models/glm-4.7-flash.nix { inherit modelsDirectory cacheDirectory; };
   };
 
   presetModels = lib.mapAttrs
@@ -94,6 +95,14 @@ let
         "https://huggingface.co/unsloth/gemma-3-27b-it-GGUF/resolve/main/gemma-3-27b-it-Q4_K_M.gguf" \
         "${cacheDirectory}/gemma-3-27b-it-Q4_K_M.gguf" \
         "27009346304"; then
+        all_ok=0
+      fi
+
+      # GLM-4.7-Flash (Q4_K_M)
+      if ! download \
+        "https://huggingface.co/unsloth/GLM-4.7-Flash-GGUF/resolve/main/GLM-4.7-Flash-Q4_K_M.gguf" \
+        "${cacheDirectory}/GLM-4.7-Flash-Q4_K_M.gguf" \
+        "18312339744"; then
         all_ok=0
       fi
 
