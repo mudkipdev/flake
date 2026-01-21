@@ -4,7 +4,7 @@
   home.packages = with pkgs; [
     claude-code
     codex
-    jetbrains.idea-community
+    jetbrains.idea-oss
     godot_4
     docker
     docker-compose

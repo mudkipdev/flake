@@ -51,7 +51,7 @@
               backupFileExtension = "backup";
               users.${constants.user.name} = import ./home;
               extraSpecialArgs = { inherit inputs constants; };
-              sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+              sharedModules = [ plasma-manager.homeModules.plasma-manager ];
             };
           }
         ];
