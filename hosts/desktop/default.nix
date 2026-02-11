@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    # ./../../modules/comfyui.nix
     ./../../modules/gaming.nix
     ./../../modules/llama-cpp.nix
     ./../../modules/open-webui.nix

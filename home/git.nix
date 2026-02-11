@@ -3,11 +3,11 @@
 {
   programs.git = {
     enable = true;
-    
+
     settings = {
       user.name = "mudkipdev";
       user.email = constants.user.email;
-      
+
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
       rebase.autoStash = true;

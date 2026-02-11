@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "jnoortheen.nix-ide"
+    ],
+    "unwantedRecommendations": [
+        "bbenoist.nix"
+    ]
+}

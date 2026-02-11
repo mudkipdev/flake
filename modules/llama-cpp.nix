@@ -13,6 +13,7 @@ let
     "qwen3-vl:30b" = import ./models/qwen3-vl.nix { inherit modelsDirectory cacheDirectory; };
     "gemma3:27b" = import ./models/gemma3-27b.nix { inherit modelsDirectory cacheDirectory; };
     "glm-4.7-flash:30b" = import ./models/glm-4.7-flash.nix { inherit modelsDirectory cacheDirectory; };
+    "qwen3-coder-next:80b" = import ./models/qwen3-coder-next.nix { inherit modelsDirectory cacheDirectory; };
   };
 
   presetModels = lib.mapAttrs
@@ -103,6 +104,14 @@ let
         "https://huggingface.co/unsloth/GLM-4.7-Flash-GGUF/resolve/main/GLM-4.7-Flash-Q4_K_M.gguf" \
         "${cacheDirectory}/GLM-4.7-Flash-Q4_K_M.gguf" \
         "18312339744"; then
+        all_ok=0
+      fi
+
+      # Qwen3-Coder-Next (Q3_K_M)
+      if ! download \
+        "https://huggingface.co/unsloth/Qwen3-Coder-Next-GGUF/resolve/main/Qwen3-Coder-Next-Q3_K_M.gguf" \
+        "${cacheDirectory}/Qwen3-Coder-Next-Q3_K_M.gguf" \
+        "38287163392"; then
         all_ok=0
       fi
 

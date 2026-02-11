@@ -24,9 +24,19 @@
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    comfyui-nix = {
+      url = "github:utensils/comfyui-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixcord = {
+      url = "github:FlameFlag/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs @ { nixpkgs, home-manager, plasma-manager, firefox-addons, rust-overlay, ... }:
+  outputs = inputs @ { nixpkgs, home-manager, plasma-manager, firefox-addons, rust-overlay, comfyui-nix, nixcord, ... }:
   let
     constants = import ./constants.nix { inherit (nixpkgs) lib; };
   in
@@ -41,6 +51,7 @@
           ({ pkgs, ... }: {
             nixpkgs.overlays = [
               rust-overlay.overlays.default
+              comfyui-nix.overlays.default
             ];
           })
 
@@ -51,7 +62,10 @@
               backupFileExtension = "backup";
               users.${constants.user.name} = import ./home;
               extraSpecialArgs = { inherit inputs constants; };
-              sharedModules = [ plasma-manager.homeModules.plasma-manager ];
+              sharedModules = [
+                plasma-manager.homeModules.plasma-manager
+                nixcord.homeModules.nixcord
+              ];
             };
           }
         ];
